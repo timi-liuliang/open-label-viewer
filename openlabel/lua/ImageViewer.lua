@@ -10,7 +10,11 @@ end
 
 -- on click
 function object:onMouseButtonDown()
-	Log:error("test")
+	local display = self:getNode("Display")
+	Log:error(display)
+	if display ~= nil then
+		display:setTextureRes("D:/test.png")
+	end
 end
 
 return setmetatable(object, Object)
