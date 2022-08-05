@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node class="Node" name="ImageView" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+	<node class="OpenLabel" name="OpenLabel" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Res="Res://test/fisheye/cuboid2d/Frame15980.json">
+		<property name="DebugDraw">
+			<obj class="OpenLabelDebugDraw" />
+		</property>
+	</node>
+	<node class="UiEventRegionRect" name="EventRegion" Enable="true" Position="0 0 -1" Rotation="0 0 0" Scale="1 1 1" Script="" Type="ui" Width="1366" Height="768">
+		<signal name="onMouseButtonDown">
+			<connect target="../" method="onMouseButtonDown" />
+		</signal>
+	</node>
+	<node class="UiImage" name="Image" Enable="true" Position="0 0 -10" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Alpha="1.0" Width="1280" Height="960" Anchor="640 -480" Texture="Res://test/fisheye/cuboid2d/Frame15980_Color.png" Color="1 1 1 1 ">
+		<property name="Material">
+			<obj class="Material" Shader="Engine://Render/Pipeline/Shaders/Ui/UiImage.shader" Uniforms.SrcTexture="Res://test/fisheye/cuboid2d/Frame15980_Color.png" />
+		</property>
+	</node>
+	<node class="Node" name="Label" Enable="true" Position="0 480 0" Rotation="0 0 0" Scale="1 1 1" Script="">
+		<node class="UiImage" name="Image" Enable="true" Position="0 0 -10" Rotation="0 0 0" Scale="1 1 1" Script="" RenderType="ui" Visible="true" Alpha="1.0" Width="1280" Height="960" Anchor="640 -480" Texture="Res://test/fisheye/cuboid2d/Frame15980_Color.png" Color="1 1 1 1 ">
+			<property name="Material">
+				<obj class="Material" Shader="Engine://Render/Pipeline/Shaders/Ui/UiImage.shader" Uniforms.SrcTexture="Res://test/fisheye/cuboid2d/Frame15980_Color.png" />
+			</property>
+		</node>
+		<node class="OpenLabel" name="OpenLabel" Enable="true" Position="0 0 0" Rotation="0 0 0" Scale="1 1 1" Script="" Res="Res://test/fisheye/cuboid2d/Frame15980.json">
+			<property name="DebugDraw">
+				<obj class="OpenLabelDebugDraw" />
+			</property>
+		</node>
+	</node>
+</node>
